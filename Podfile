@@ -6,11 +6,13 @@ target 'RappStore' do
   use_frameworks!
 
   # Pods for RappStore
+  pod 'Alamofire', '~> 4.0'
+  pod 'DGActivityIndicatorView'
 
   target 'RappStoreTests' do
     inherit! :search_paths
     # Pods for testing
-pod "Alamofire"  
+    
 end
 
 end

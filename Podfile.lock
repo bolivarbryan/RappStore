@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.0.1)
+  - DGActivityIndicatorView (2.1)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 4.0)
+  - DGActivityIndicatorView
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  DGActivityIndicatorView: 1942ae657a8d247c035f229422b2d15a8adbe5b6
 
-PODFILE CHECKSUM: 6a9a728307b3d6fc4cb5a891fb5033d865a94e56
+PODFILE CHECKSUM: 40e1959ac7b7b6c99ec544b3f7f4ffab4ca02f40
 
 COCOAPODS: 1.0.1

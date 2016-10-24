@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RappStore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>941A2D169ECAF2D817640364B6F36A5E</key>
+		<key>92AF68E814C004BC4049404024067CDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2C04A2CA636A4942FDBD0C8D24D7835</key>
+		<key>AFB03979D32044469989588246C4F26F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B60743E8BE0CD52DAD97DAF09D65161E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
