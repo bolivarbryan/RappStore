@@ -7,17 +7,20 @@
 //
 
 import UIKit
-
+import CoreData
 class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var apps = [NSManagedObject]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ApiRequests.getAppList { (apps) in
+        //ApiRequests.getAppList { (apps) in
             
-        }
+        //}
+        
+        //ApiRequests.getApplications()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,12 +40,15 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoryTableViewCell
+        let app = apps[indexPath.row]
+        
+        cell.labelName.text =  app.value(forKey: "name") as? String
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return apps.count
     }
 }

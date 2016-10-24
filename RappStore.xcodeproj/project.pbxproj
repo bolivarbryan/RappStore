@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AA27F754CEFA000C2956D84 /* Pods_RappStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24BE691C9B8C778B36D3A00 /* Pods_RappStore.framework */; };
+		9300BE1C1DBE835000C77615 /* RappManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9300BE1B1DBE835000C77615 /* RappManager.swift */; };
 		93434C6A1DBE4B6700286082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C691DBE4B6700286082 /* AppDelegate.swift */; };
 		93434C6F1DBE4B6700286082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93434C6D1DBE4B6700286082 /* Main.storyboard */; };
 		93434C721DBE4B6700286082 /* RappStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93434C701DBE4B6700286082 /* RappStore.xcdatamodeld */; };
@@ -61,6 +62,7 @@
 		46F4478C4A1EADDF86DFCC38 /* Pods-RappStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RappStoreTests/Pods-RappStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FA751936F8D8CE1F38DD25F /* Pods_RappStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RappStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91631C8C5284083209FA748C /* Pods-RappStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RappStore/Pods-RappStore.debug.xcconfig"; sourceTree = "<group>"; };
+		9300BE1B1DBE835000C77615 /* RappManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RappManager.swift; path = Manager/RappManager.swift; sourceTree = "<group>"; };
 		93434C661DBE4B6700286082 /* RappStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RappStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93434C691DBE4B6700286082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93434C6E1DBE4B6700286082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				93434C951DBE4FD500286082 /* Constants.swift */,
 				93434C991DBE529E00286082 /* ApiRequests.swift */,
+				9300BE1B1DBE835000C77615 /* RappManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				93434C9E1DBE671000286082 /* CategoriesViewController.swift in Sources */,
 				93434CD31DBE6B0400286082 /* AppCollectionViewCell.swift in Sources */,
 				93434C9C1DBE5E5400286082 /* Category.swift in Sources */,
+				9300BE1C1DBE835000C77615 /* RappManager.swift in Sources */,
 				93434CD51DBE6CFE00286082 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

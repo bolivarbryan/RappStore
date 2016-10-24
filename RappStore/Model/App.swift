@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import  CoreData
 
 class App: NSObject {
     var category: Category!
@@ -39,5 +40,39 @@ class App: NSObject {
        
         price = amount + " " + currency
         category = Category(dictionary["category"] as! Dictionary<String, AnyObject>)
+        
+        storeApp()
     }
+    
+    
+    func storeApp() {
+        let context = ApiRequests.getContext()
+        
+        //retrieve the entity that we just created
+        let entity =  NSEntityDescription.entity(forEntityName: "Application", in: context)
+        
+        let app = NSManagedObject(entity: entity!, insertInto: context)
+        
+        //set the entity values
+        app.setValue(image, forKey: "image")
+        app.setValue(title, forKey: "title")
+        app.setValue(link.absoluteString, forKey: "link")
+        app.setValue(summary, forKey: "summary")
+        app.setValue(name, forKey: "name")
+        app.setValue(artist, forKey: "artist")
+        app.setValue(price, forKey: "price")
+        app.setValue(category.label, forKey: "category")
+        
+        //save the object
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
+    
+    
 }

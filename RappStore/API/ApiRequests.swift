@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import DGActivityIndicatorView
+import CoreData
 
 class ApiRequests: NSObject {
     
@@ -52,14 +53,14 @@ class ApiRequests: NSObject {
             let apps = NSMutableArray()
             
             for appData in entry as! NSArray{
+                //saving on CoreData, if there is not internet connection return last syncrhonized info and show a message
                 let app = App(appData as! Dictionary<String, AnyObject>)
                 apps.add(app)
             }
            
-            //saving on CoreData, if there is not internet connection return last syncrhonized info and show a message
-            
             
             completion!(apps as! [App])
+            
         }
     }
 
@@ -74,4 +75,16 @@ class ApiRequests: NSObject {
         }
         return nil
     }
+    
+    // MARK: CoreData methods
+    
+    class func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+   
+    
+
+    
 }
