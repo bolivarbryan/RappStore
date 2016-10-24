@@ -9,4 +9,4 @@
 import Foundation
 
 let kApiEnvironment = "https://itunes.apple.com/"
-let kApiUrl = "us/rss/topfreeapplications/limit=20/json"
+let kApiUrlAppList = "us/rss/topfreeapplications/limit=20/json"

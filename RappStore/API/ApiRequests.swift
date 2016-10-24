@@ -14,7 +14,7 @@ class ApiRequests: NSObject {
     
     //MARK: - GET METHODS
     
-    class func simpleGet(url:String, completion: ((_ result : NSDictionary ) -> Void)?){ // basic get request using alamofire library and a custom Activity indicator view
+    class func simpleGet(endpoint:String, completion: ((_ result : NSDictionary ) -> Void)?){ // basic get request using alamofire library and a custom Activity indicator view
         
         var activityIndicatorView = DGActivityIndicatorView(type: DGActivityIndicatorAnimationType.lineScalePulseOutRapid, tintColor: UIColor.white, size: 50)
         let aiView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
@@ -25,12 +25,15 @@ class ApiRequests: NSObject {
         aiView.backgroundColor = UIColor(white: 0, alpha: 0.3)
         aiView.addSubview(activityIndicatorView!)
         UIApplication.shared.keyWindow?.addSubview(aiView)
-        
         aiView.isHidden = false
         
-        Alamofire.request("https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json").response { response in
+        Alamofire.request(kApiEnvironment + endpoint).response { response in
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print(convertStringToDictionary(text: utf8Text))
+                if let appsDictionary = convertStringToDictionary(text: utf8Text) {
+                    completion! (appsDictionary as NSDictionary)
+                }else{
+                    completion! (["error":"Response Error"])
+                }
             }
             
             aiView.isHidden = true
@@ -40,10 +43,20 @@ class ApiRequests: NSObject {
     }
     
     
-    class func getAppList(completion: ((_ result : [App] ) -> Void)?){
-    
-        ApiRequests.simpleGet(url: "") { (dic) in
+    class func getAppList(completion: ((_ result : [App] ) -> Void)?){ // parsing app data and storing on CoreData
+        
+        ApiRequests.simpleGet(endpoint: kApiUrlAppList) { (response) in
             
+            let feed = (response as NSDictionary).object(forKey: "feed")
+            let entry = (feed as! NSDictionary).object(forKey: "entry")
+            let apps = NSMutableArray()
+            
+            for appData in entry as! NSArray{
+                let app = App(appData as! Dictionary<String, AnyObject>)
+                apps.add(app)
+            }
+           
+            print(apps)
         }
     }
 

@@ -18,6 +18,7 @@
 		93434C931DBE4D1300286082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C921DBE4D1300286082 /* ViewController.swift */; };
 		93434C961DBE4FD500286082 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C951DBE4FD500286082 /* Constants.swift */; };
 		93434C9A1DBE529E00286082 /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C991DBE529E00286082 /* ApiRequests.swift */; };
+		93434C9C1DBE5E5400286082 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C9B1DBE5E5400286082 /* Category.swift */; };
 		D647D246F1C6E06529CB0239 /* Pods_RappStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA751936F8D8CE1F38DD25F /* Pods_RappStoreTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		93434C921DBE4D1300286082 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93434C951DBE4FD500286082 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = API/Constants.swift; sourceTree = "<group>"; };
 		93434C991DBE529E00286082 /* ApiRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiRequests.swift; path = API/ApiRequests.swift; sourceTree = "<group>"; };
+		93434C9B1DBE5E5400286082 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Model/Category.swift; sourceTree = "<group>"; };
 		A24BE691C9B8C778B36D3A00 /* Pods_RappStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RappStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACF0DE988F6F8A48AD28D7D /* Pods-RappStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RappStoreTests/Pods-RappStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF727C082DC15354A0DAE454 /* Pods-RappStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RappStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-RappStore/Pods-RappStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				93434C8F1DBE4CE700286082 /* App.swift */,
+				93434C9B1DBE5E5400286082 /* Category.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				93434C901DBE4CE700286082 /* App.swift in Sources */,
 				93434C931DBE4D1300286082 /* ViewController.swift in Sources */,
 				93434C6A1DBE4B6700286082 /* AppDelegate.swift in Sources */,
+				93434C9C1DBE5E5400286082 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

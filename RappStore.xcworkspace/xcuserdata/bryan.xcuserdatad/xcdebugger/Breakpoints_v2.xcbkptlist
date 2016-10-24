@@ -9,77 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RappStore/Model/App.swift"
-            timestampString = "499010846.658098"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "App"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RappStore.App.init () -&gt; RappStore.App"
-                  moduleName = "RappStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bryan/Documents/Training/RappStore/RappStore/Model/App.swift"
-                  timestampString = "499014322.684018"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "53">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RappStore.App.__allocating_init () -&gt; RappStore.App"
-                  moduleName = "RappStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bryan/Documents/Training/RappStore/RappStore/Model/App.swift"
-                  timestampString = "499014322.685825"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RappStore/API/ApiRequests.swift"
-            timestampString = "499014045.348725"
+            timestampString = "499017079.643283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "simpleGet(url:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RappStore/API/ApiRequests.swift"
-            timestampString = "499014312.998427"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "simpleGet(url:completion:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getAppList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
