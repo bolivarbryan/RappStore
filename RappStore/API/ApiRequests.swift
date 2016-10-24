@@ -56,7 +56,10 @@ class ApiRequests: NSObject {
                 apps.add(app)
             }
            
-            print(apps)
+            //saving on CoreData, if there is not internet connection return last syncrhonized info and show a message
+            
+            
+            completion!(apps as! [App])
         }
     }
 
