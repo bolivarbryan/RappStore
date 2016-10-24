@@ -43,25 +43,35 @@ class ApiRequests: NSObject {
         
     }
     
-    
-    class func getAppList(completion: ((_ result : [App] ) -> Void)?){ // parsing app data and storing on CoreData
+    class func getAppList(completion: ((_ result : [App] ) -> Void)?) { // parsing app data and storing on CoreData
         
-        ApiRequests.simpleGet(endpoint: kApiUrlAppList) { (response) in
+        if Reachability.isConnectedToNetwork() == true
+        {
+            print("Internet Connection Available!")
             
-            let feed = (response as NSDictionary).object(forKey: "feed")
-            let entry = (feed as! NSDictionary).object(forKey: "entry")
-            let apps = NSMutableArray()
-            
-            for appData in entry as! NSArray{
-                //saving on CoreData, if there is not internet connection return last syncrhonized info and show a message
-                let app = App(appData as! Dictionary<String, AnyObject>)
-                apps.add(app)
+            ApiRequests.simpleGet(endpoint: kApiUrlAppList) { (response) in
+                //cleaning database for preventing repeated data
+                RappManager.clearAllData()
+                
+                let feed = (response as NSDictionary).object(forKey: "feed")
+                let entry = (feed as! NSDictionary).object(forKey: "entry")
+                
+                for appData in entry as! NSArray{
+                    //saving on CoreData, if there is not internet connection return last syncrhonized info and show a message
+                    let _ = App(appData as! Dictionary<String, AnyObject>)
+                }
+                completion!([])
             }
-           
-            
-            completion!(apps as! [App])
+        }
+        else
+        {
+            print("Internet Connection not Available!")
+            //showing internet failed connection
+            completion!([])
             
         }
+
+       
     }
 
     

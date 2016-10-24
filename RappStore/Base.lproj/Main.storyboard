@@ -49,7 +49,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-9A-oPj">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" editingAccessoryType="detailButton" rowHeight="66" id="U40-zg-rVi" customClass="CategoryTableViewCell" customModule="RappStore" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" editingAccessoryType="detailButton" rowHeight="66" id="U40-zg-rVi" customClass="CategoryTableViewCell" customModule="RappStore" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U40-zg-rVi" id="I2w-mb-0Nw">
@@ -131,11 +131,64 @@
                     <navigationItem key="navigationItem" title="Rapp Store" id="Oc6-s4-X96"/>
                     <connections>
                         <outlet property="tableView" destination="s8e-9A-oPj" id="KNQ-Sc-hAv"/>
+                        <segue destination="zTm-mf-Vqk" kind="show" identifier="AppSegue" id="Xhw-wg-K6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1280.8" y="-113.79310344827587"/>
+        </scene>
+        <!--Application View Controller-->
+        <scene sceneID="BCZ-GM-YLb">
+            <objects>
+                <viewController id="zTm-mf-Vqk" customClass="ApplicationViewController" customModule="RappStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zy3-sH-1tI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZCa-cp-nwb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZJZ-c0-2AR">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aK4-Be-d8Z">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="poY-Me-yFa">
+                                    <size key="itemSize" width="358" height="89"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AppCollectionViewCell" id="vQJ-pc-gbO" customClass="AppCollectionViewCell" customModule="RappStore" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="0.0" width="358" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zTm-mf-Vqk" id="Rzh-NK-3Nv"/>
+                                    <outlet property="delegate" destination="zTm-mf-Vqk" id="ieH-3s-6kK"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aK4-Be-d8Z" firstAttribute="top" secondItem="zy3-sH-1tI" secondAttribute="bottom" id="N1M-w8-n7L"/>
+                            <constraint firstItem="ZCa-cp-nwb" firstAttribute="top" secondItem="aK4-Be-d8Z" secondAttribute="bottom" id="X0n-qA-F3h"/>
+                            <constraint firstAttribute="trailing" secondItem="aK4-Be-d8Z" secondAttribute="trailing" id="ogp-Fg-eeh"/>
+                            <constraint firstItem="aK4-Be-d8Z" firstAttribute="leading" secondItem="ZJZ-c0-2AR" secondAttribute="leading" id="yV5-mL-COg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="aK4-Be-d8Z" id="f2b-Jc-BfJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqv-uf-NnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101.5999999999999" y="-114.69265367316342"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4tn-wT-4ae">

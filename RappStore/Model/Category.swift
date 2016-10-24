@@ -14,7 +14,7 @@ class Category: NSObject {
     
     override init () {
         // uncomment this line if your class has been inherited from any other class
-        //super.init()
+        super.init()
     }
     
     convenience init(_ dictionary: Dictionary<String, AnyObject>) {

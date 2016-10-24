@@ -20,8 +20,7 @@ class App: NSObject {
     var link: NSURL!
     
     override init () {
-        // uncomment this line if your class has been inherited from any other class
-        //super.init()
+        super.init()
     }
     
     convenience init(_ dictionary: Dictionary<String, AnyObject>) {
@@ -66,7 +65,6 @@ class App: NSObject {
         //save the object
         do {
             try context.save()
-            print("saved!")
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         } catch {
