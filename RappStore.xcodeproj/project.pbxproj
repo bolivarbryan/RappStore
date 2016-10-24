@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93434C6A1DBE4B6700286082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C691DBE4B6700286082 /* AppDelegate.swift */; };
+		93434C6C1DBE4B6700286082 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C6B1DBE4B6700286082 /* ViewController.swift */; };
+		93434C6F1DBE4B6700286082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93434C6D1DBE4B6700286082 /* Main.storyboard */; };
+		93434C721DBE4B6700286082 /* RappStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93434C701DBE4B6700286082 /* RappStore.xcdatamodeld */; };
+		93434C741DBE4B6700286082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93434C731DBE4B6700286082 /* Assets.xcassets */; };
+		93434C771DBE4B6700286082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93434C751DBE4B6700286082 /* LaunchScreen.storyboard */; };
+		93434C821DBE4B6800286082 /* RappStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93434C811DBE4B6800286082 /* RappStoreTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93434C7E1DBE4B6800286082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93434C5E1DBE4B6700286082 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93434C651DBE4B6700286082;
+			remoteInfo = RappStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93434C661DBE4B6700286082 /* RappStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RappStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93434C691DBE4B6700286082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93434C6B1DBE4B6700286082 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93434C6E1DBE4B6700286082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93434C711DBE4B6700286082 /* RappStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RappStore.xcdatamodel; sourceTree = "<group>"; };
+		93434C731DBE4B6700286082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93434C761DBE4B6700286082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93434C781DBE4B6700286082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93434C7D1DBE4B6800286082 /* RappStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RappStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93434C811DBE4B6800286082 /* RappStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RappStoreTests.swift; sourceTree = "<group>"; };
+		93434C831DBE4B6800286082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93434C631DBE4B6700286082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93434C7A1DBE4B6800286082 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93434C5D1DBE4B6700286082 = {
+			isa = PBXGroup;
+			children = (
+				93434C681DBE4B6700286082 /* RappStore */,
+				93434C801DBE4B6800286082 /* RappStoreTests */,
+				93434C671DBE4B6700286082 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93434C671DBE4B6700286082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93434C661DBE4B6700286082 /* RappStore.app */,
+				93434C7D1DBE4B6800286082 /* RappStoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93434C681DBE4B6700286082 /* RappStore */ = {
+			isa = PBXGroup;
+			children = (
+				93434C691DBE4B6700286082 /* AppDelegate.swift */,
+				93434C6B1DBE4B6700286082 /* ViewController.swift */,
+				93434C6D1DBE4B6700286082 /* Main.storyboard */,
+				93434C731DBE4B6700286082 /* Assets.xcassets */,
+				93434C751DBE4B6700286082 /* LaunchScreen.storyboard */,
+				93434C781DBE4B6700286082 /* Info.plist */,
+				93434C701DBE4B6700286082 /* RappStore.xcdatamodeld */,
+			);
+			path = RappStore;
+			sourceTree = "<group>";
+		};
+		93434C801DBE4B6800286082 /* RappStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				93434C811DBE4B6800286082 /* RappStoreTests.swift */,
+				93434C831DBE4B6800286082 /* Info.plist */,
+			);
+			path = RappStoreTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93434C651DBE4B6700286082 /* RappStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93434C861DBE4B6800286082 /* Build configuration list for PBXNativeTarget "RappStore" */;
+			buildPhases = (
+				93434C621DBE4B6700286082 /* Sources */,
+				93434C631DBE4B6700286082 /* Frameworks */,
+				93434C641DBE4B6700286082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RappStore;
+			productName = RappStore;
+			productReference = 93434C661DBE4B6700286082 /* RappStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93434C7C1DBE4B6800286082 /* RappStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93434C891DBE4B6800286082 /* Build configuration list for PBXNativeTarget "RappStoreTests" */;
+			buildPhases = (
+				93434C791DBE4B6800286082 /* Sources */,
+				93434C7A1DBE4B6800286082 /* Frameworks */,
+				93434C7B1DBE4B6800286082 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93434C7F1DBE4B6800286082 /* PBXTargetDependency */,
+			);
+			name = RappStoreTests;
+			productName = RappStoreTests;
+			productReference = 93434C7D1DBE4B6800286082 /* RappStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93434C5E1DBE4B6700286082 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Bolivar;
+				TargetAttributes = {
+					93434C651DBE4B6700286082 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K87XPR878Y;
+						ProvisioningStyle = Automatic;
+					};
+					93434C7C1DBE4B6800286082 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K87XPR878Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 93434C651DBE4B6700286082;
+					};
+				};
+			};
+			buildConfigurationList = 93434C611DBE4B6700286082 /* Build configuration list for PBXProject "RappStore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93434C5D1DBE4B6700286082;
+			productRefGroup = 93434C671DBE4B6700286082 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93434C651DBE4B6700286082 /* RappStore */,
+				93434C7C1DBE4B6800286082 /* RappStoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93434C641DBE4B6700286082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93434C771DBE4B6700286082 /* LaunchScreen.storyboard in Resources */,
+				93434C741DBE4B6700286082 /* Assets.xcassets in Resources */,
+				93434C6F1DBE4B6700286082 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93434C7B1DBE4B6800286082 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93434C621DBE4B6700286082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93434C721DBE4B6700286082 /* RappStore.xcdatamodeld in Sources */,
+				93434C6C1DBE4B6700286082 /* ViewController.swift in Sources */,
+				93434C6A1DBE4B6700286082 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93434C791DBE4B6800286082 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93434C821DBE4B6800286082 /* RappStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93434C7F1DBE4B6800286082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93434C651DBE4B6700286082 /* RappStore */;
+			targetProxy = 93434C7E1DBE4B6800286082 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93434C6D1DBE4B6700286082 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93434C6E1DBE4B6700286082 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93434C751DBE4B6700286082 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93434C761DBE4B6700286082 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93434C841DBE4B6800286082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93434C851DBE4B6800286082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93434C871DBE4B6800286082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K87XPR878Y;
+				INFOPLIST_FILE = RappStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bolivar.RappStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		93434C881DBE4B6800286082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K87XPR878Y;
+				INFOPLIST_FILE = RappStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bolivar.RappStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		93434C8A1DBE4B6800286082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K87XPR878Y;
+				INFOPLIST_FILE = RappStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bolivar.RappStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RappStore.app/RappStore";
+			};
+			name = Debug;
+		};
+		93434C8B1DBE4B6800286082 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K87XPR878Y;
+				INFOPLIST_FILE = RappStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Bolivar.RappStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RappStore.app/RappStore";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93434C611DBE4B6700286082 /* Build configuration list for PBXProject "RappStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93434C841DBE4B6800286082 /* Debug */,
+				93434C851DBE4B6800286082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93434C861DBE4B6800286082 /* Build configuration list for PBXNativeTarget "RappStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93434C871DBE4B6800286082 /* Debug */,
+				93434C881DBE4B6800286082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		93434C891DBE4B6800286082 /* Build configuration list for PBXNativeTarget "RappStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93434C8A1DBE4B6800286082 /* Debug */,
+				93434C8B1DBE4B6800286082 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93434C701DBE4B6700286082 /* RappStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93434C711DBE4B6700286082 /* RappStore.xcdatamodel */,
+			);
+			currentVersion = 93434C711DBE4B6700286082 /* RappStore.xcdatamodel */;
+			path = RappStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 93434C5E1DBE4B6700286082 /* Project object */;
+}
