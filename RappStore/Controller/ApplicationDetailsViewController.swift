@@ -18,7 +18,7 @@ class ApplicationDetailsViewController: UIViewController {
     
     let headerHeight = 200
     let parallaxHeight = 150
-    let minimumParallaxHeight = 20
+    let minimumParallaxHeight = 80
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,10 +26,10 @@ class ApplicationDetailsViewController: UIViewController {
         let headerView:UIImageView = UIImageView()
         headerView.sd_setImage(with: NSURL(string: app.image) as! URL)
         headerView.contentMode = UIViewContentMode.scaleAspectFit;
-        headerView.frame = CGRect(x: 0, y: 0, width: Int(self.scrollView.frame.size.width), height: headerHeight)
+        headerView.frame = CGRect(x: 0, y: 10, width: Int(self.scrollView.frame.size.width), height: headerHeight)
         headerView.backgroundColor = UIColor.black
         scrollView.parallaxHeader.view = headerView;
-        scrollView.parallaxHeader.height = CGFloat(parallaxHeight);
+        scrollView.parallaxHeader.height = CGFloat(self.view.frame.size.width);
         scrollView.parallaxHeader.mode = MXParallaxHeaderMode.fill;
         scrollView.parallaxHeader.minimumHeight = CGFloat(minimumParallaxHeight);
         
