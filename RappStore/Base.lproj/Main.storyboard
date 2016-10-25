@@ -292,8 +292,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mb-Ud-2Vf">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2N-UG-GIR">
-                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="15"/>
+                                                <color key="textColor" red="0.5607843137254902" green="0.55686274509803924" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-zW-SzP">
@@ -326,7 +326,7 @@
                                             <constraint firstAttribute="bottom" secondItem="9aq-zW-SzP" secondAttribute="bottom" id="9jq-pX-n59"/>
                                             <constraint firstAttribute="trailing" secondItem="o2N-UG-GIR" secondAttribute="trailing" constant="10" id="AGm-dY-oxR"/>
                                             <constraint firstAttribute="trailing" secondItem="uqx-6T-ekh" secondAttribute="trailing" constant="10" id="JHa-pK-Gio"/>
-                                            <constraint firstItem="o2N-UG-GIR" firstAttribute="top" secondItem="9mb-Ud-2Vf" secondAttribute="top" constant="10" id="QA8-ct-aE2"/>
+                                            <constraint firstItem="o2N-UG-GIR" firstAttribute="top" secondItem="9mb-Ud-2Vf" secondAttribute="top" constant="82" id="QA8-ct-aE2"/>
                                             <constraint firstItem="o2N-UG-GIR" firstAttribute="leading" secondItem="9mb-Ud-2Vf" secondAttribute="leading" constant="10" id="V0B-T6-rH0"/>
                                             <constraint firstAttribute="trailing" secondItem="Eum-2n-abv" secondAttribute="trailing" id="VKm-3V-zj6"/>
                                             <constraint firstAttribute="height" secondItem="o2N-UG-GIR" secondAttribute="height" constant="300" id="d8N-6q-Dui"/>
@@ -337,14 +337,35 @@
                                             <constraint firstAttribute="trailing" secondItem="9aq-zW-SzP" secondAttribute="trailing" id="xpZ-ru-oET"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09e-LW-lmC">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ldU-EN-I4b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="20"/>
+                                        <color key="textColor" red="0.19108670950000001" green="0.21380567549999999" blue="0.30504983660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiz-Lr-3dv">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ihk-6K-K1P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                        <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9mb-Ud-2Vf" secondAttribute="trailing" id="6Gj-dx-5JV"/>
                                     <constraint firstItem="9mb-Ud-2Vf" firstAttribute="leading" secondItem="HSL-eh-SLb" secondAttribute="leading" id="AEK-CQ-kyn"/>
+                                    <constraint firstItem="09e-LW-lmC" firstAttribute="top" secondItem="HSL-eh-SLb" secondAttribute="top" constant="10" id="LtC-OX-gDW"/>
                                     <constraint firstItem="9mb-Ud-2Vf" firstAttribute="width" secondItem="HSL-eh-SLb" secondAttribute="width" id="OGa-H6-YDu"/>
+                                    <constraint firstAttribute="trailing" secondItem="09e-LW-lmC" secondAttribute="trailing" constant="10" id="RET-QQ-X4h"/>
+                                    <constraint firstItem="09e-LW-lmC" firstAttribute="leading" secondItem="HSL-eh-SLb" secondAttribute="leading" constant="10" id="SK5-mn-aYw"/>
+                                    <constraint firstItem="eiz-Lr-3dv" firstAttribute="leading" secondItem="09e-LW-lmC" secondAttribute="leading" id="lw0-AT-9UA"/>
                                     <constraint firstAttribute="bottom" secondItem="9mb-Ud-2Vf" secondAttribute="bottom" constant="100" id="qfD-ya-o2B"/>
                                     <constraint firstItem="9mb-Ud-2Vf" firstAttribute="top" secondItem="HSL-eh-SLb" secondAttribute="top" id="spj-aw-DfX"/>
+                                    <constraint firstItem="eiz-Lr-3dv" firstAttribute="top" secondItem="09e-LW-lmC" secondAttribute="bottom" constant="12" id="w0o-bZ-2qH"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -357,6 +378,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appName" destination="09e-LW-lmC" id="k6o-kN-epN"/>
+                        <outlet property="artist" destination="eiz-Lr-3dv" id="9tD-Kg-ygJ"/>
                         <outlet property="scrollView" destination="HSL-eh-SLb" id="FJ1-C8-zBw"/>
                         <outlet property="summary" destination="o2N-UG-GIR" id="hvt-QM-Lp4"/>
                     </connections>

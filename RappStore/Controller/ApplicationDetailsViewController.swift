@@ -19,6 +19,11 @@ class ApplicationDetailsViewController: UIViewController {
     let headerHeight = 200
     let parallaxHeight = 150
     let minimumParallaxHeight = 80
+    
+    @IBOutlet weak var appName: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var price: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,6 +39,8 @@ class ApplicationDetailsViewController: UIViewController {
         scrollView.parallaxHeader.minimumHeight = CGFloat(minimumParallaxHeight);
         
         self.summary.text = app.summary
+        self.appName.text = app.name
+        self.artist.text = app.artist
     }
 
     override func didReceiveMemoryWarning() {
