@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import DGActivityIndicatorView
 import CoreData
+import Toaster
 
 class ApiRequests: NSObject {
     
@@ -34,6 +35,8 @@ class ApiRequests: NSObject {
                     completion! (appsDictionary as NSDictionary)
                 }else{
                     completion! (["error":"Response Error"])
+                    Toast(text: "Response Error").show()
+
                 }
             }
             
@@ -67,6 +70,7 @@ class ApiRequests: NSObject {
         {
             print("Internet Connection not Available!")
             //showing internet failed connection
+            Toast(text: "Internet Connection not Available!").show()
             completion!([])
             
         }

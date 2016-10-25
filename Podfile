@@ -10,7 +10,8 @@ target 'RappStore' do
   pod 'DGActivityIndicatorView'
   pod 'SDWebImage', '~>3.8'
   pod 'MXParallaxHeader'
-
+  pod 'Toaster', '~> 2.0'
+  
   target 'RappStoreTests' do
     inherit! :search_paths
     # Pods for testing
