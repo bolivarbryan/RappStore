@@ -17,6 +17,11 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Style", style: .plain, target: self, action: #selector(toggleGrid))
+    }
+    func toggleGrid()  {
+        gridMode = !gridMode
+        self.collectionView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +53,7 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
         cell.price.text = apps[indexPath.row].price
         cell.picture.sd_setImage(with: NSURL(string: apps[indexPath.row].image)! as URL!)
         
+        
         return cell
     }
     
@@ -64,7 +70,7 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
                                  sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         
         if gridMode == true {
-            return CGSize(width: 98, height: 98)
+            return CGSize(width: 106, height: 104)
         }else{
             return CGSize(width: self.view.frame.size.width, height: 106)
         }
