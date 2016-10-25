@@ -34,6 +34,10 @@ class ApplicationDetailsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func openLinkInAppStore(_ sender: AnyObject) {
+        UIApplication.shared.openURL(app.link as? URL)
+
+    }
     
 
  
