@@ -19,8 +19,8 @@
         <array key="SF-UI-Display-Semibold.otf">
             <string>SFUIDisplay-Semibold</string>
         </array>
-        <array key="SF-UI-Text-Medium.otf">
-            <string>SFUIText-Medium</string>
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -165,11 +165,11 @@
                                     <size key="itemSize" width="375" height="106"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AppCollectionViewCell" id="vQJ-pc-gbO" customClass="AppCollectionViewCell" customModule="RappStore" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="12" width="366" height="106"/>
+                                        <rect key="frame" x="5" y="0.0" width="366" height="106"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="106"/>
@@ -292,10 +292,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mb-Ud-2Vf">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2N-UG-GIR">
-                                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-zW-SzP">
+                                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqx-6T-ekh">
                                                 <color key="backgroundColor" red="0.94509803920000002" green="0.34901960780000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -309,19 +312,33 @@
                                                     <action selector="openLinkInAppStore:" destination="jt1-oa-c6j" eventType="touchUpInside" id="cai-uS-B6K"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eum-2n-abv">
+                                                <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="sUI-sA-BAI"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="9aq-zW-SzP" firstAttribute="leading" secondItem="9mb-Ud-2Vf" secondAttribute="leading" id="0QR-B2-xNC"/>
+                                            <constraint firstItem="9aq-zW-SzP" firstAttribute="top" secondItem="Eum-2n-abv" secondAttribute="bottom" id="1Xl-Ox-sqH"/>
+                                            <constraint firstAttribute="bottom" secondItem="9aq-zW-SzP" secondAttribute="bottom" id="9jq-pX-n59"/>
                                             <constraint firstAttribute="trailing" secondItem="o2N-UG-GIR" secondAttribute="trailing" constant="10" id="AGm-dY-oxR"/>
                                             <constraint firstAttribute="trailing" secondItem="uqx-6T-ekh" secondAttribute="trailing" constant="10" id="JHa-pK-Gio"/>
                                             <constraint firstItem="o2N-UG-GIR" firstAttribute="top" secondItem="9mb-Ud-2Vf" secondAttribute="top" constant="10" id="QA8-ct-aE2"/>
                                             <constraint firstItem="o2N-UG-GIR" firstAttribute="leading" secondItem="9mb-Ud-2Vf" secondAttribute="leading" constant="10" id="V0B-T6-rH0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eum-2n-abv" secondAttribute="trailing" id="VKm-3V-zj6"/>
                                             <constraint firstAttribute="height" secondItem="o2N-UG-GIR" secondAttribute="height" constant="300" id="d8N-6q-Dui"/>
-                                            <constraint firstItem="uqx-6T-ekh" firstAttribute="top" secondItem="o2N-UG-GIR" secondAttribute="bottom" constant="10" id="iLT-gI-Kii"/>
+                                            <constraint firstItem="uqx-6T-ekh" firstAttribute="top" secondItem="o2N-UG-GIR" secondAttribute="bottom" constant="40" id="iLT-gI-Kii"/>
+                                            <constraint firstItem="Eum-2n-abv" firstAttribute="leading" secondItem="9mb-Ud-2Vf" secondAttribute="leading" id="nqJ-5O-evJ"/>
+                                            <constraint firstItem="Eum-2n-abv" firstAttribute="top" secondItem="o2N-UG-GIR" secondAttribute="bottom" constant="10" id="qQs-tR-dqf"/>
                                             <constraint firstItem="uqx-6T-ekh" firstAttribute="leading" secondItem="9mb-Ud-2Vf" secondAttribute="leading" constant="10" id="w5P-VC-hID"/>
+                                            <constraint firstAttribute="trailing" secondItem="9aq-zW-SzP" secondAttribute="trailing" id="xpZ-ru-oET"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9mb-Ud-2Vf" secondAttribute="trailing" id="6Gj-dx-5JV"/>
                                     <constraint firstItem="9mb-Ud-2Vf" firstAttribute="leading" secondItem="HSL-eh-SLb" secondAttribute="leading" id="AEK-CQ-kyn"/>
@@ -331,7 +348,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HSL-eh-SLb" firstAttribute="top" secondItem="hhK-Qi-fJG" secondAttribute="bottom" id="DoJ-Er-2ee"/>
                             <constraint firstAttribute="trailing" secondItem="HSL-eh-SLb" secondAttribute="trailing" id="KZA-Oc-c5l"/>
@@ -353,9 +370,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sna-z3-dxB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Wj7-68-7H2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Wj7-68-7H2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.14509803921568626" green="0.15686274509803921" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
