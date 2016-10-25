@@ -42,11 +42,9 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppCollectionViewCell",
                                                       for: indexPath) as! AppCollectionViewCell
-        cell.backgroundColor = UIColor.white
         cell.name.text = apps[indexPath.row].name
         cell.artist.text = apps[indexPath.row].artist
         cell.price.text = apps[indexPath.row].price
-        
         cell.picture.sd_setImage(with: NSURL(string: apps[indexPath.row].image)! as URL!)
         
         return cell
