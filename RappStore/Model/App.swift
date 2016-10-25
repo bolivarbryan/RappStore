@@ -36,8 +36,15 @@ class App: NSObject {
         //getting price of the app
         let currency = ((dictionary["im:price"] as! NSDictionary).object(forKey: "attributes") as! NSDictionary).object(forKey: "currency") as! String
         let amount = ((dictionary["im:price"] as! NSDictionary).object(forKey: "attributes") as! NSDictionary).object(forKey: "amount") as! String
-       
-        price = amount + " " + currency
+        
+        let appPrice = NumberFormatter().number(from: amount)!.decimalValue
+
+        if appPrice == 0 {
+            price = "Free"
+        }else{
+            price = String(describing: appPrice) + " " + currency
+        }
+        
         category = Category(dictionary["category"] as! Dictionary<String, AnyObject>)
         
         storeApp()
