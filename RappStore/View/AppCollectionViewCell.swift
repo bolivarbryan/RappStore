@@ -9,5 +9,11 @@
 import UIKit
 
 class AppCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var price: UILabel!
     
+    @IBOutlet weak var nameConstraintLeft: NSLayoutConstraint!
+    @IBOutlet weak var nameConstraintTop: NSLayoutConstraint!
 }

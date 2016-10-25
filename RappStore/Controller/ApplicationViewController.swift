@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import SDWebImage
 class ApplicationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var apps:[App]! = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,12 +30,19 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppCollectionViewCell",
                                                       for: indexPath) as! AppCollectionViewCell
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.white
+        cell.name.text = apps[indexPath.row].name
+        cell.artist.text = apps[indexPath.row].artist
+        cell.price.text = apps[indexPath.row].price
+        
+        cell.picture.sd_setImage(with: NSURL(string: apps[indexPath.row].image)! as URL!)
+        //cell.picture
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return apps.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

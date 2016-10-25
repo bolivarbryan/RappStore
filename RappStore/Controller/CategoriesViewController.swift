@@ -13,13 +13,15 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     var apps = [NSManagedObject]()
     var categoriesArray:NSArray! = []
+    var selectedCategory = ""
+    var selectedApps:[App]! = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ApiRequests.getAppList { (apps) in 
             RappManager.getApplicationsByCategories(completion: { (categories) in
                 print(categories)
-                self.categoriesArray = categories as! NSArray
+                self.categoriesArray = categories
                 self.tableView.reloadData()
             })
         }
@@ -35,9 +37,19 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         return UIStatusBarStyle.lightContent;
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "AppSegue") {
+            let viewController:ApplicationViewController = segue.destination as! ApplicationViewController
+            viewController.title = self.selectedCategory
+            viewController.apps = self.selectedApps
+        }
+    }
+    
     //MARK: - GET METHODS
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedCategory = ((categoriesArray.object(at: indexPath.row) as! NSDictionary).object(forKey: "category") as? String)!
+        self.selectedApps = (categoriesArray.object(at: indexPath.row) as! NSDictionary).object(forKey: "apps") as! [App]
         self.performSegue(withIdentifier: "AppSegue", sender: self)
     }
     

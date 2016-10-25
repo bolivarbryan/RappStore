@@ -1,15 +1,20 @@
 PODS:
   - Alamofire (4.0.1)
   - DGActivityIndicatorView (2.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - DGActivityIndicatorView
+  - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   DGActivityIndicatorView: 1942ae657a8d247c035f229422b2d15a8adbe5b6
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 40e1959ac7b7b6c99ec544b3f7f4ffab4ca02f40
+PODFILE CHECKSUM: 77bf09f8932bd9fc2eadb0a14e29d404e02953b6
 
 COCOAPODS: 1.0.1
