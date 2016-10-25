@@ -13,6 +13,7 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var collectionView: UICollectionView!
     var apps:[App]! = []
     var selectedApp:App! = nil
+    var gridMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,4 +58,17 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+     func collectionView(_ collectionView: UICollectionView,
+                                 layout collectionViewLayout: UICollectionViewLayout,
+                                 sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
+        
+        if gridMode == true {
+            return CGSize(width: 98, height: 98)
+        }else{
+            return CGSize(width: self.view.frame.size.width, height: 106)
+        }
+        
+    }
+
 }
