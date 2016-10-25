@@ -15,17 +15,34 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     var categoriesArray:NSArray! = []
     var selectedCategory = ""
     var selectedApps:[App]! = []
+    var refreshControl: UIRefreshControl!
+    let kPullDownToRefreshText = "Pull to refresh"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ApiRequests.getAppList { (apps) in 
+        //setting up pull down to refresh
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString(kPullDownToRefreshText, comment: "pull down to refresh"))
+        refreshControl.addTarget(self, action: #selector(self.reloadData), for
+            : UIControlEvents.valueChanged)
+        refreshControl.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)
+        refreshControl.tintColor = UIColor.darkText
+        tableView.addSubview(refreshControl)
+        
+        self.reloadData()
+    }
+        
+    
+    func reloadData(){
+        ApiRequests.getAppList { (apps) in
             RappManager.getApplicationsByCategories(completion: { (categories) in
                 print(categories)
                 self.categoriesArray = categories
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             })
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
