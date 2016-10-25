@@ -12,10 +12,10 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
 
     @IBOutlet weak var collectionView: UICollectionView!
     var apps:[App]! = []
+    var selectedApp:App! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,9 +23,21 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
         // Dispose of any resources that can be recreated.
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "DetailsSegue") {
+            let viewController:ApplicationDetailsViewController = segue.destination as! ApplicationDetailsViewController
+            viewController.title = self.selectedApp.name
+            viewController.app = self.selectedApp
+        }
     }
+    
+    
+    // MARK: UICollection view Delegate methods
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedApp =  apps[indexPath.row]
+        self.performSegue(withIdentifier: "DetailsSegue", sender: self)
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppCollectionViewCell",
@@ -36,7 +48,6 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
         cell.price.text = apps[indexPath.row].price
         
         cell.picture.sd_setImage(with: NSURL(string: apps[indexPath.row].image)! as URL!)
-        //cell.picture
         
         return cell
     }
