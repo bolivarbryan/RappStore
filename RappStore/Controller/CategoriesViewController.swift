@@ -17,6 +17,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
     var selectedApps:[App]! = []
     var refreshControl: UIRefreshControl!
     let kPullDownToRefreshText = "Pull to refresh"
+    var showPaidList = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +31,42 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         refreshControl.tintColor = UIColor.darkText
         tableView.addSubview(refreshControl)
         
-        self.reloadData()
+        self.togglePaid()
     }
+    
+    func togglePaid() {
+        showPaidList = !showPaidList
         
+        if showPaidList == true {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Free", style: .plain, target: self, action: #selector(togglePaid))
+        }else{
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Paid", style: .plain, target: self, action: #selector(togglePaid))
+        }
+
+        reloadData()
+    }
     
     func reloadData(){
-        ApiRequests.getAppList { (apps) in
-            RappManager.getApplicationsByCategories(completion: { (categories) in
-                print(categories)
-                self.categoriesArray = categories
-                self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
-            })
+        if showPaidList == false {
+            ApiRequests.getAppList { (apps) in
+                RappManager.getApplicationsByCategories(completion: { (categories) in
+                    print(categories)
+                    self.categoriesArray = categories
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                })
+            }
+        }else{
+            ApiRequests.getPaidAppList { (apps) in
+                RappManager.getApplicationsByCategories(completion: { (categories) in
+                    print(categories)
+                    self.categoriesArray = categories
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                })
+            }
         }
+      
     }
 
     override func didReceiveMemoryWarning() {
