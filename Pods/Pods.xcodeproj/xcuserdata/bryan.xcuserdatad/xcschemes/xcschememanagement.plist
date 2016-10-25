@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MXParallaxHeader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RappStore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>47DE3374A5B3C9E81F8413FDAE51E051</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>8CA6B6BF496B01F9ADF6F89BEAC42FB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE58340C183B963C900C9FF91F7C3E95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE23F6E418C33ABE7D02AD88D5AF3066</key>
+		<key>C4379A100F724BACABEB7823FAB7A447</key>
 		<dict>
 			<key>primary</key>
 			<true/>

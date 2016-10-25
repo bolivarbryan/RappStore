@@ -261,11 +261,42 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="aK4-Be-d8Z" id="f2b-Jc-BfJ"/>
+                        <segue destination="jt1-oa-c6j" kind="show" id="T3d-VJ-lyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tqv-uf-NnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2101.5999999999999" y="-114.69265367316342"/>
+        </scene>
+        <!--Application Details View Controller-->
+        <scene sceneID="yD3-Gx-AfU">
+            <objects>
+                <viewController id="jt1-oa-c6j" customClass="ApplicationDetailsViewController" customModule="RappStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hhK-Qi-fJG"/>
+                        <viewControllerLayoutGuide type="bottom" id="0SD-oc-i9t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wXL-CE-OIf">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSL-eh-SLb"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HSL-eh-SLb" firstAttribute="top" secondItem="hhK-Qi-fJG" secondAttribute="bottom" id="DoJ-Er-2ee"/>
+                            <constraint firstAttribute="trailing" secondItem="HSL-eh-SLb" secondAttribute="trailing" id="KZA-Oc-c5l"/>
+                            <constraint firstItem="0SD-oc-i9t" firstAttribute="top" secondItem="HSL-eh-SLb" secondAttribute="bottom" id="U3t-Tx-1PG"/>
+                            <constraint firstItem="HSL-eh-SLb" firstAttribute="leading" secondItem="wXL-CE-OIf" secondAttribute="leading" id="WYx-cK-hel"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="HSL-eh-SLb" id="FJ1-C8-zBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SP5-cn-WVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860" y="-114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4tn-wT-4ae">

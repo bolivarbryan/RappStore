@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8CA6B6BF496B01F9ADF6F89BEAC42FB6'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = 'AE58340C183B963C900C9FF91F7C3E95'
+               BlueprintName = 'MXParallaxHeader'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SDWebImage.framework'>
+               BuildableName = 'MXParallaxHeader.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

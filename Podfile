@@ -9,6 +9,8 @@ target 'RappStore' do
   pod 'Alamofire', '~> 4.0'
   pod 'DGActivityIndicatorView'
   pod 'SDWebImage', '~>3.8'
+  pod 'MXParallaxHeader'
+
   target 'RappStoreTests' do
     inherit! :search_paths
     # Pods for testing

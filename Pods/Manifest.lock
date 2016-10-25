@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.0.1)
   - DGActivityIndicatorView (2.1)
+  - MXParallaxHeader (0.5.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -8,13 +9,15 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - DGActivityIndicatorView
+  - MXParallaxHeader
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   DGActivityIndicatorView: 1942ae657a8d247c035f229422b2d15a8adbe5b6
+  MXParallaxHeader: 5070ba8e8af27ec793c0d32ae82cfd2318e59635
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 77bf09f8932bd9fc2eadb0a14e29d404e02953b6
+PODFILE CHECKSUM: 5b4d06576c98d5fbef27629aaac16ece238d42bf
 
 COCOAPODS: 1.0.1
