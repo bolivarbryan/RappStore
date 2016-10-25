@@ -21,7 +21,9 @@ class ApplicationViewController: UIViewController, UICollectionViewDataSource, U
     }
     func toggleGrid()  {
         gridMode = !gridMode
-        self.collectionView.reloadData()
+        self.collectionView.performBatchUpdates({ 
+            self.collectionView.reloadData()
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
